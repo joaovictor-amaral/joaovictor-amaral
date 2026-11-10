@@ -1,34 +1,21 @@
 # João Victor Amaral
 
-Desenvolvedor Full Stack Java com foco em back-end e IA aplicada. Construo sistemas empresariais em Java e Spring Boot e integro LLMs e agentes de IA a processos reais, com segurança no código e testes automatizados.
+Sou desenvolvedor full stack em Araruama (RJ). Passei pouco mais de dois anos cuidando de servidores, rede e backup antes de virar desenvolvedor em 2026. Hoje desenvolvo o ERP interno de uma empresa de turismo receptivo e transporte, em Java e Spring Boot, e coloco agentes de IA para trabalhar dentro dele.
 
-Full stack Java developer: I build enterprise systems with Spring Boot and integrate LLMs and AI agents into real business processes.
+Procuro um segundo contrato 100% remoto, CLT ou PJ. Meu LinkedIn: [linkedin.com/in/victoramrb22](https://www.linkedin.com/in/victoramrb22)
 
-**Disponível para trabalho 100% remoto (CLT ou PJ)** · [LinkedIn](https://www.linkedin.com/in/victoramrb22) · Araruama, RJ, Brasil
+## O que construí (código privado da empresa)
 
-## O que eu faço
+**Atendente de manutenção no WhatsApp.** O motorista manda áudio, foto ou texto contando o problema do veículo. O agente (Gemini com tool calling) identifica o veículo, confere se já existe chamado aberto e registra tudo na API em Java. A primeira versão levava até 42 s para responder. O gargalo era o modo de raciocínio do modelo, desnecessário para uma tarefa tão direta. Reduzi esse modo ao mínimo e o tempo caiu para cerca de 3,8 s.
 
-- Back-end em Java 21 e Spring Boot, com Clean Architecture, DDD, Spring Security (JWT e RBAC), PostgreSQL e Flyway
-- Agentes de IA que operam sistemas por tool calling (Gemini e OpenAI), com as travas contra prompt injection no código, não no prompt
-- Integrações com APIs de fornecedores, meios de pagamento e WhatsApp Cloud API
-- Front-end em React e TypeScript
-- Docker (Dockerfile multi-stage e Docker Compose)
+**Segurança de um agente que grava no sistema.** Uma auditoria interna mostrou que uma mensagem maliciosa poderia anotar "freio revisado" num chamado de freio ainda aberto. Tirei essa escolha do modelo: ele só enxerga apelidos como `chamado_1`, e quem decide em qual chamado gravar é o código. O sistema tem 137 testes automatizados, parte deles tentando exatamente esse tipo de ataque.
 
-## No trabalho atual (código privado)
+**Escritório Virtual.** Um MVP em que agentes de IA recebem pedidos da gestão e executam o trabalho, mas nenhuma entrega vale até uma pessoa aprovar. Cada passo fica registrado.
 
-Desenvolvo o ERP interno de uma empresa de turismo receptivo e transporte:
+## Com o que trabalho
 
-- Módulo de frota e manutenção com atendente de IA no WhatsApp, que recebe ocorrências por texto, áudio, foto e vídeo e abre chamados pela API
-- Auditoria de segurança adversarial e 137 testes automatizados
-- Tempo de resposta do atendente reduzido de cerca de 42 s para 3,8 s
-- Escritório Virtual: agentes de IA com roteamento por LLM, aprovação humana obrigatória e trilha de auditoria
+Java 21, Spring Boot, Spring Security, PostgreSQL, Flyway, JUnit e Mockito no back-end. React e TypeScript no front-end. Node.js e as APIs do Gemini e da OpenAI na camada de IA. Docker para empacotar e rodar.
 
-## Projetos públicos
+---
 
-| Projeto | O que mostra |
-|---|---|
-| Em breve: plataforma de manutenção de frotas com agente de IA | API Java, agente com tool calling, Docker, CI e deploy, com dados fictícios |
-
-## Stack
-
-Java · Spring Boot · Spring Security · JPA/Hibernate · PostgreSQL · Docker · React · TypeScript · Node.js · Gemini e OpenAI APIs
+English: full stack Java developer in Brazil. I build Spring Boot systems and the AI agents that work inside them. Open to remote work.

@@ -16,6 +16,8 @@ Procuro um segundo contrato 100% remoto, CLT ou PJ. LinkedIn: [linkedin.com/in/v
 
 **Dados de colaboradores.** O módulo de RH guarda dados pessoais, então esses campos ficam cifrados no banco, aparecem mascarados conforme o perfil e cada acesso a uma ficha fica registrado. Os prazos de guarda e descarte seguem a LGPD.
 
+**Escritório Virtual.** Um MVP separado do ERP: 58 agentes de IA organizados como os 16 setores da empresa. Um agente principal faz a triagem, o chefe do setor delega e o especialista pesquisa fontes oficiais, consulta os documentos do setor e passa por um checklist antes de a resposta chegar a uma pessoa, que aprova ou devolve. Os documentos são quebrados em trechos e indexados no PostgreSQL; hoje a busca é full-text em português, e a próxima versão usa embeddings com pgvector. Quando falta informação, o pedido vira pendência com a lista do que precisa ser anexado.
+
 ## Com o que trabalho
 
 Java 21, Spring Boot, PostgreSQL, Flyway, JUnit e Mockito no back-end. React, TypeScript e MUI no front-end. Node.js e as APIs do Gemini e da OpenAI nos agentes. Docker, Caddy e Redis na operação.
